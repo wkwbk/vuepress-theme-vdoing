@@ -8,7 +8,7 @@ import dayjs from 'dayjs'
 // import baiduCode from './config/baiduCode' // 百度统计hm码
 // import htmlModules from './config/htmlModules' // 自定义插入的html块
 
-const DOMAIN_NAME = 'lisir.me' // 域名 (不带https)
+const DOMAIN_NAME = 'new.lisir.me' // 域名 (不带https)
 const WEB_SITE = `https://${DOMAIN_NAME}` // 网址
 
 export default defineConfig4CustomTheme<VdoingThemeConfig>({
@@ -166,7 +166,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     footer: {
       createYear: 2020, // 博客创建年份
       copyrightInfo:
-        'By LI SIR', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
+        'By <a href="https://lisir.me" target="_blank">LI SIR</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
     },
 
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
@@ -292,11 +292,11 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       {
         choosen: 'gitalk',
         options: {
-          clientID: 'a6e1355287947096b88b',
-          clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
-          repo: '', // GitHub 仓库
-          owner: '', // GitHub仓库所有者
-          admin: [''], // 对仓库有写权限的人
+          clientID: '31ea43193a2e0376ae34',
+          clientSecret: 'b830d063e591a747f9073ec3919654898485e371',
+          repo: 'blog-gitalk-comment', // GitHub 仓库
+          owner: 'wkwbk', // GitHub仓库所有者
+          admin: ['wkwbk'], // 对仓库有写权限的人
           // distractionFreeMode: true,
           pagerDirection: 'last', // 'first'正序 | 'last'倒序
           id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
