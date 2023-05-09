@@ -30,19 +30,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     nav: [
       { text: '首页', link: '/' },
       {
-        text: 'Test',
-        link: '', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
-        items: [
-          // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
-          {
-            text: 'Test',
-            items: [
-              { text: 'Test', link: '/' },
-            ],
-          },
-        ],
-      },
-      {
         text: '学习笔记',
         items: [
           { text: 'Java', link: '/pages/89f3f0/' },
@@ -70,6 +57,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       {
         text: '备忘录',
         link: '/pages/cddbc9/',
+      },
+      {
+        text: '友链',
+        link: '/links/',
       },
       {
         text: '索引',
@@ -213,14 +204,14 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       },
     ],
 
-    'vuepress-plugin-baidu-autopush', // 百度自动推送
+    // 'vuepress-plugin-baidu-autopush', // 百度自动推送
 
-    [
-      'vuepress-plugin-baidu-tongji', // 百度统计
-      {
-        // hm: baiduCode,
-      },
-    ],
+    // [
+    //   'vuepress-plugin-baidu-tongji', // 百度统计
+    //   {
+    //     hm: baiduCode,
+    //   },
+    // ],
 
     // 全文搜索。 ⚠️注意：此插件会在打开网站时多加载部分js文件用于搜索，导致初次访问网站变慢。如在意初次访问速度的话可以不使用此插件！（推荐：vuepress-plugin-thirdparty-search）
     // 'fulltext-search',
@@ -230,27 +221,27 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       'thirdparty-search',
       {
         thirdparty: [
-          {
-            title: '在MDN中搜索',
-            frontUrl: 'https://developer.mozilla.org/zh-CN/search?q=', // 搜索链接的前面部分
-            behindUrl: '', // 搜索链接的后面部分，可选，默认 ''
-          },
-          {
-            title: '在Runoob中搜索',
-            frontUrl: 'https://www.runoob.com/?s=',
-          },
-          {
-            title: '在Vue API中搜索',
-            frontUrl: 'https://cn.vuejs.org/v2/api/#',
-          },
-          {
-            title: '在Bing中搜索',
-            frontUrl: 'https://cn.bing.com/search?q=',
-          },
-          {
-            title: '通过百度搜索本站的',
-            frontUrl: `https://www.baidu.com/s?wd=site%3A${DOMAIN_NAME}%20`,
-          },
+          // {
+          //   title: '在MDN中搜索',
+          //   frontUrl: 'https://developer.mozilla.org/zh-CN/search?q=', // 搜索链接的前面部分
+          //   behindUrl: '', // 搜索链接的后面部分，可选，默认 ''
+          // },
+          // {
+          //   title: '在Runoob中搜索',
+          //   frontUrl: 'https://www.runoob.com/?s=',
+          // },
+          // {
+          //   title: '在Vue API中搜索',
+          //   frontUrl: 'https://cn.vuejs.org/v2/api/#',
+          // },
+          // {
+          //   title: '在Bing中搜索',
+          //   frontUrl: 'https://cn.bing.com/search?q=',
+          // },
+          // {
+          //   title: '通过百度搜索本站的',
+          //   frontUrl: `https://www.baidu.com/s?wd=site%3A${DOMAIN_NAME}%20`,
+          // },
         ],
       }
     ],
