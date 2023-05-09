@@ -55,6 +55,14 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         ],
       },
       {
+        text: '设计模式',
+        items: [
+          { text: '创建型模式', link: '/pages/fcf575/' },
+          { text: '结构型模式', link: '/pages/f7633a/' },
+          { text: '行为型模式', link: '/pages/3ed4f0/' },
+        ],
+      },
+      {
         text: '备忘录',
         link: '/pages/cddbc9/',
       },
