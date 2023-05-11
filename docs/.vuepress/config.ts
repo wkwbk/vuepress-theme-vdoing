@@ -36,6 +36,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: 'Linux', link: '/pages/9e7f0f/' },
           { text: 'Hadoop', link: '/pages/654c18/' },
           { text: 'Markdown', link: '/pages/48b064/' },
+          { text: '备忘录', link: '/pages/cddbc9/' },
           { text: '其他', link: '/pages/986293/' },
         ],
       },
@@ -63,19 +64,22 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         ],
       },
       {
-        text: '备忘录',
-        link: '/pages/cddbc9/',
-      },
-      {
-        text: '友链',
-        link: '/links/',
-      },
-      {
         text: '索引',
         items: [
-          { text: '归档', link: '/archives/' },
-          { text: '分类', link: '/categories/' },
-          { text: '标签', link: '/tags/' },
+          {
+            text: '本站',
+            items: [
+              { text: '归档', link: '/archives/' },
+              { text: '分类', link: '/categories/' },
+              { text: '标签', link: '/tags/' },
+            ],
+          },
+          {
+            text: '我的',
+            items: [
+              { text: '友链', link: '/links/' },
+            ],
+          },
         ],
       },
     ],
