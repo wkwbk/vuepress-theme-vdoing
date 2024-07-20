@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://img.wkwbk.eu.org/i/favicon.png
+heroImage: https://img.lisir.me/image/my/favicon.png
 heroText: LI SIR - 第二大脑
 tagline: 你的时间花在哪里，你的收获就在哪里
 actionText: 开始学习
