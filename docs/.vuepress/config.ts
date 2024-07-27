@@ -150,7 +150,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         {
           iconClass: 'icon-youjian',
           title: '发邮件',
-          link: 'mailto:lisir.me@qq.com',
+          link: 'mailto:lisir.me@outlook.com',
         },
         {
           iconClass: 'icon-github',
@@ -160,7 +160,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         {
           iconClass: 'icon-telegram',
           title: 'Telegram',
-          link: 'https://t.me/zvzsu',
+          link: 'https://t.me/lisir_me',
         },
       ],
     },
