@@ -181,7 +181,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   // 注入到页面<head>中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
   head: [
     ['link', { rel: 'icon', href: 'https://img.lisir.me/image/my/favicon.png' }], //favicons，资源放在public文件夹
-    ['script', { src: 'https://cdnjs.cloudflare.com/ajax/libs/twikoo/1.6.38/twikoo.min.js' }], // Twikoo 评论
     [
       'meta',
       {
@@ -205,12 +204,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   // 插件配置
   plugins: <UserPlugins>[
     'vuepress-plugin-mathjax', // MathJax 插件
-    [
-      {
-        name: 'custom-plugins',
-        globalUIComponents: ["Twikoo"]
-      }
-    ],
     [
       "sitemap", // 网站地图
       {
@@ -292,26 +285,26 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
       },
     ],
-    // [
-    //   'vuepress-plugin-comment', // 评论
-    //   {
-    //     choosen: 'gitalk',
-    //     options: {
-    //       clientID: '31ea43193a2e0376ae34',
-    //       clientSecret: 'b830d063e591a747f9073ec3919654898485e371',
-    //       repo: 'blog-gitalk-comment', // GitHub 仓库
-    //       owner: 'wkwbk', // GitHub仓库所有者
-    //       admin: ['wkwbk'], // 对仓库有写权限的人
-    //       // distractionFreeMode: true,
-    //       pagerDirection: 'last', // 'first'正序 | 'last'倒序
-    //       id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
-    //       title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
-    //       labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
-    //       body:
-    //         '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
-    //     },
-    //   },
-    // ],
+    [
+      'vuepress-plugin-comment', // 评论
+      {
+        choosen: 'gitalk',
+        options: {
+          clientID: '31ea43193a2e0376ae34',
+          clientSecret: 'b830d063e591a747f9073ec3919654898485e371',
+          repo: 'blog-gitalk-comment', // GitHub 仓库
+          owner: 'wkwbk', // GitHub仓库所有者
+          admin: ['wkwbk'], // 对仓库有写权限的人
+          // distractionFreeMode: true,
+          pagerDirection: 'last', // 'first'正序 | 'last'倒序
+          id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
+          title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
+          labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
+          body:
+            '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
+        },
+      },
+    ],
     [
       '@vuepress/last-updated', // "上次更新"时间格式
       {
