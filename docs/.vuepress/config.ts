@@ -203,6 +203,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
   // 插件配置
   plugins: <UserPlugins>[
+    'vuepress-plugin-mathjax', // MathJax 插件
     [
       "sitemap", // 网站地图
       {
@@ -284,26 +285,26 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         },
       },
     ],
-    [
-      'vuepress-plugin-comment', // 评论
-      {
-        choosen: 'gitalk',
-        options: {
-          clientID: '31ea43193a2e0376ae34',
-          clientSecret: 'b830d063e591a747f9073ec3919654898485e371',
-          repo: 'blog-gitalk-comment', // GitHub 仓库
-          owner: 'wkwbk', // GitHub仓库所有者
-          admin: ['wkwbk'], // 对仓库有写权限的人
-          // distractionFreeMode: true,
-          pagerDirection: 'last', // 'first'正序 | 'last'倒序
-          id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
-          title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
-          labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
-          body:
-            '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
-        },
-      },
-    ],
+    // [
+    //   'vuepress-plugin-comment', // 评论
+    //   {
+    //     choosen: 'gitalk',
+    //     options: {
+    //       clientID: '31ea43193a2e0376ae34',
+    //       clientSecret: 'b830d063e591a747f9073ec3919654898485e371',
+    //       repo: 'blog-gitalk-comment', // GitHub 仓库
+    //       owner: 'wkwbk', // GitHub仓库所有者
+    //       admin: ['wkwbk'], // 对仓库有写权限的人
+    //       // distractionFreeMode: true,
+    //       pagerDirection: 'last', // 'first'正序 | 'last'倒序
+    //       id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
+    //       title: '「评论」<%- frontmatter.title %>', // GitHub issue 的标题
+    //       labels: ['Gitalk', 'Comment'], // GitHub issue 的标签
+    //       body:
+    //         '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
+    //     },
+    //   },
+    // ],
     [
       '@vuepress/last-updated', // "上次更新"时间格式
       {
