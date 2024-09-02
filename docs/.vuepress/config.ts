@@ -181,6 +181,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   // 注入到页面<head>中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
   head: [
     ['link', { rel: 'icon', href: 'https://img.lisir.me/image/my/favicon.png' }], //favicons，资源放在public文件夹
+    ['script', { src: 'https://cdnjs.cloudflare.com/ajax/libs/twikoo/1.6.38/twikoo.min.js' }], // Twikoo 评论
     [
       'meta',
       {
@@ -204,6 +205,12 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   // 插件配置
   plugins: <UserPlugins>[
     'vuepress-plugin-mathjax', // MathJax 插件
+    [
+      {
+        name: 'custom-plugins',
+        globalUIComponents: ["Twikoo"]
+      }
+    ],
     [
       "sitemap", // 网站地图
       {
