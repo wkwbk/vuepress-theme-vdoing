@@ -18,7 +18,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: "LI SIR - 第二大脑",
+      title: "LI SIR - 个人博客",
       description: '学习与总结',
     }
   },
