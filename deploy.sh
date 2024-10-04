@@ -17,6 +17,8 @@ cd $dist_path
 echo 'blog.lisir.me' >CNAME
 
 git init
+git config user.name "wkwbk"
+git config user.email "lisir.me@outlook.com"
 git add -A
 git commit -m "Site updated: $commit_info"
 git push -f $push_addr HEAD:$push_branch
