@@ -25,4 +25,6 @@ jobs: # 工作流
         with:
           node-version: ${{ matrix.node-version }} # 版本
       - name: run deploy.sh
+        env: # 设置环境变量
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm install && npm run deploy # 执行的命令
