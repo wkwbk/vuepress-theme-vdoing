@@ -6,7 +6,7 @@ set -e
 push_addr='git@github.com:wkwbk/vuepress-theme-vdoing.git' # git提交地址，也可以手动设置，比如：push_addr=git@github.com:xugaoyi/vuepress-theme-vdoing.git
 commit_info=$(date '+%F %H:%M:%S')
 dist_path=docs/.vuepress/dist # 打包生成的文件夹路径
-push_branch=main              # 推送的分支
+push_branch=gh-pages              # 推送的分支
 
 # 生成静态文件
 npm run build:win
@@ -14,7 +14,7 @@ npm run build:win
 # 进入生成的文件夹
 cd $dist_path
 
-echo 'new.lisir.me' >CNAME
+echo 'blog.lisir.me' >CNAME
 
 git init
 git add -A
