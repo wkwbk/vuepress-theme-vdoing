@@ -38,7 +38,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: 'Hadoop', link: '/pages/654c18/' },
           { text: 'Markdown', link: '/pages/48b064/' },
           { text: '备忘录', link: '/pages/cddbc9/' },
-          { text: '其他', link: '/pages/986293/' },
         ],
       },
       {
