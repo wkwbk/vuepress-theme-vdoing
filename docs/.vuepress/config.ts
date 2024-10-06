@@ -33,6 +33,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         text: '学习笔记',
         link: '/note/',
         items: [
+          { text: 'Git', link: '/pages/2bcb97/' },
           { text: 'Java', link: '/pages/89f3f0/' },
           { text: 'Linux', link: '/pages/9e7f0f/' },
           { text: 'Hadoop', link: '/pages/654c18/' },
